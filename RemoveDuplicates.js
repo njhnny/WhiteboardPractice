@@ -1,18 +1,17 @@
-var myArray = [7, 9, "hi", 12, "hi", 7, 53];
-let unique = [...new Set(myArray)];
-console.log(unique);
+let myArray = [7, 9, "hi", 12, "hi", 7, 53];
+let output = [...new Set(myArray)];
+console.log(output);
 
-//works
 
-let a = [7, 9, "hi", 12, "hi", 7, 53];
+function removeDuplicates(a) {
 let b = [];
-let len = a.length;
-for( let i=0; i<len; i++) {
+let c = a.length;
+for( let i=0; i<c; i++) {
   if(b.indexOf(a[i])=== -1){
     b.push(a[i]);
   }
 }
-
-console.log(b);
-
+return b;
+}
+removeDuplicates([7, 9, "hi", 12, "hi", 7, 53])
 //works
