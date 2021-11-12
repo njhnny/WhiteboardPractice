@@ -1,11 +1,16 @@
-const strToUrl = ((str, n)=>{
-  let newStr = "";
-  for(let i=0; i<n; i++)
-  {
-    if(str[i]===" ")
-    newStr += "%20";
-    else
-    newStr += str[i];
-  }
-  console.log (newStr);
-})(" john smith ", 11)
+const urlString = (string) => {
+  const stringArray = string.split("");
+  const newArray = [];
+  stringArray.forEach(a => {
+    if (a === " ") {
+    newArray.push("%20");
+    } else {
+      newArray.push(a);
+    }
+  });
+  return newArray.join("");
+};
+
+urlString("Hi My Name Is Nick")
+
+//works
